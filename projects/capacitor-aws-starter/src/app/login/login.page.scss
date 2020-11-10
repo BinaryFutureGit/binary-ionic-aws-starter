@@ -1,0 +1,117 @@
+.list-ios {
+  margin-bottom: 0px;
+}
+
+.segment-ios .segment-button {
+  min-height: 40px;
+}
+
+.facebook-button {
+  --background: #3c5a99 !important;
+  height: 40px !important;
+  width: 100%;
+}
+.button-height {
+  width: 100%;
+  height: 40px !important;
+}
+
+.forgotPasswordButton {
+  width: 100%;
+  height: 40px;
+}
+
+.button-height-google {
+  margin-top: 21px;
+  width: 100%;
+  height: 40px !important;
+  --background: #0975fd;
+}
+.ionic-starter-logo-icon {
+  width: 16px;
+  margin: 5px !important;
+}
+
+.login-page {
+  margin: 10px;
+}
+
+ion-segment-button {
+  width: 40vw;
+}
+
+.signup-msg {
+  text-align: center;
+  padding: 0px;
+}
+.sign-in-ionic-starter {
+  font-weight: bold;
+  display: block;
+
+  white-space: normal;
+  // width: 160px;
+  padding-top: 4px;
+  line-height: 15px;
+  text-align: center;
+}
+.err-icon {
+  font-size: 18px;
+}
+.label-login {
+  display: block;
+  margin-top: 9px !important;
+  margin-bottom: 9px !important;
+}
+.form-field {
+  padding-right: 16px;
+}
+.forgot-pass {
+  ion-label {
+    margin-top: 0px !important;
+  }
+}
+//Added to change the css of login buttons
+.google-img {
+  height: 38px;
+  position: absolute;
+  left: 1px;
+  top: 1px;
+}
+.signin-button-text {
+  color: white;
+  font-weight: bold;
+  font-family: "Roboto-Medium", sans-serif;
+  margin: 0px;
+}
+.logo-facebook {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+  font-size: 29px;
+  padding-right: 6px;
+}
+.login-options {
+  max-width: 56%;
+  word-wrap: break-word;
+  text-align: -webkit-center;
+}
+.halfScreenButton {
+  width: 43%;
+}
+.form-field {
+  font-size: 17px !important;
+  color: black !important;
+}
+.forgotPassword {
+  display: block;
+  max-width: 300px;
+  margin: auto;
+}
+
+.mobileTitle {
+  position: absolute;
+}
+
+.mainDiv {
+  margin: 0 auto !important;
+}

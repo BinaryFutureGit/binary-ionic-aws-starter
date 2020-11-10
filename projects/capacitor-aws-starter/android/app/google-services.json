@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "119760947619",
+    "firebase_url": "https://binary-ionic-aws-demo.firebaseio.com",
+    "project_id": "binary-ionic-aws-demo",
+    "storage_bucket": "binary-ionic-aws-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119760947619:android:cbbd457a54c29dfcd6b216",
+        "android_client_info": {
+          "package_name": "com.binary.capacitorAwsStarterApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "119760947619-sffj1lf30ak4ju3dd8ofqnsto6agen79.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAb2pty-oXqlJ8riTe3GtOqIqU0RHm9VGI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "119760947619-sffj1lf30ak4ju3dd8ofqnsto6agen79.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

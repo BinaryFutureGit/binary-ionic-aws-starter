@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Ionic AWS Starter</string>
+    <string name="title_activity_main">Ionic AWS Starter</string>
+    <string name="package_name">com.binary.capacitorAwsStarterApp</string>
+    <string name="custom_url_scheme">cap-aws</string>
+</resources>
