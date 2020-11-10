@@ -1,0 +1,106 @@
+.list-ios {
+  margin-bottom: 0px;
+}
+
+.segment-ios .segment-button {
+  min-height: 40px;
+}
+
+.button-height {
+  width: 100%;
+  height: 40px !important;
+}
+
+.forgotPasswordButton {
+  width: 100%;
+  height: 40px;
+}
+
+.ionic-starter-logo-icon {
+  width: 16px;
+  margin: 5px !important;
+}
+
+.login-page {
+  margin: 10px;
+}
+
+ion-segment-button {
+  width: 40vw;
+}
+
+.err-icon {
+  font-size: 18px;
+}
+.label-login {
+  display: block;
+  margin-top: 9px !important;
+  margin-bottom: 9px !important;
+}
+.form-field {
+  padding-right: 16px;
+}
+.forgot-pass {
+  ion-label {
+    margin-top: 0px !important;
+  }
+}
+
+.signin-button-text {
+  color: white;
+  font-weight: bold;
+  font-family: "Roboto-Medium", sans-serif;
+  margin: 0px;
+}
+
+.login-options {
+  max-width: 56%;
+  word-wrap: break-word;
+  text-align: -webkit-center;
+}
+.halfScreenButton {
+  width: 43%;
+}
+.form-field {
+  font-size: 17px !important;
+  color: black !important;
+}
+.forgotPassword {
+  display: block;
+  max-width: 300px;
+  margin: auto;
+}
+
+.mobileTitle {
+  position: absolute;
+}
+
+.mainDiv {
+  margin: 0 auto !important;
+}
+
+.profilePicture {
+  height: auto !important;
+  width: 200px !important;
+  // border-radius: 50%;
+  margin: 0 auto 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  // border: 1px solid black;
+  object-fit: cover;
+}
+
+.photo-picker {
+  margin-left: 17px;
+}
+
+.photo-picker > amplify-photo-picker > .amplify-component > {
+  max-height: 100px !important;
+  border-radius: 50%;
+  margin: 0 auto 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  border: 1px solid black;
+}

@@ -1,0 +1,10 @@
+{
+  "APNSSandboxChannelRequest": {
+    "BundleId": "com.binary.capacitorAwsStarterApp",
+    "DefaultAuthenticationMethod": "key",
+    "Enabled": true,
+    "TeamId": "6W2BQKW6Z2",
+    "TokenKey": "-----BEGIN PRIVATE KEY-----\n    MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgLIFoGHqqFullNB9Q\n    UPoeAE1q6Fn7HgkZhTmpASkzYzygCgYIKoZIzj0DAQehRANCAATrraI8rH2EDsnQ\n    kmGObp8FZB6yo+mCpQ7qWS4w/+OAMMOE0H0hSDaGhgklij77ENvn37t5emKDO6cx\n    Rh/Z68tY\n    -----END PRIVATE KEY-----",
+    "TokenKeyId": "RXTH5XTHKF"
+  }
+}

@@ -1,0 +1,108 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Profile
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img
+    class="profilePicture"
+    defaultSrc="/svg/ios-contact.svg"
+    [amplifyFile]="picture"
+    [options]="{ level: 'private' }"
+  />
+
+  <div class="photo-picker">
+    <amplify-photo-picker
+      [storageOptions]="{'level': 'private'}"
+      path="pictures"
+      (uploaded)="onImageUploaded($event)"
+    ></amplify-photo-picker>
+  </div>
+  <form [formGroup]="ionicStarterProfileForm">
+    <ion-item class="form-field">
+      <ion-label>Name</ion-label>
+      <ion-input
+        type="text"
+        autocorrect="“off”"
+        autocomplete="off"
+        formControlName="name"
+        value="{{name}}"
+      ></ion-input>
+
+      <ion-button
+        clear
+        color="danger"
+        (click)="showProfileNameErrors()"
+        item-end
+        *ngIf="fieldProfileName.touched && !fieldProfileName.valid"
+      >
+        <ion-icon name="alert" class="err-icon"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item class="form-field">
+      <ion-label>Email</ion-label>
+      <ion-input
+        type="email"
+        formControlName="email"
+        value="{{email}}"
+      ></ion-input>
+
+      <ion-button
+        clear
+        color="danger"
+        (click)="showEmailErrors(ionicStarterProfileForm)"
+        item-end
+        *ngIf="fieldProfileEmail.touched && !fieldProfileEmail.valid"
+      >
+        <ion-icon name="alert" class="err-icon"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="form-field">
+      <ion-label>Birth Date</ion-label>
+      <ion-datetime
+        displayFormat="YYYY/MM/DD"
+        formControlName="birthdate"
+        value="{{birthdate}}"
+      ></ion-datetime>
+    </ion-item>
+
+    <ion-item class="form-field">
+      <ion-label>Gender</ion-label>
+      <ion-select formControlName="gender" name="gender" value="{{gender}}">
+        <ion-select-option value="Female">Female</ion-select-option>
+        <ion-select-option value="Male">Male</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item no-lines>
+      <ion-button
+        color="primary"
+        (click)="updateDetails()"
+        full
+        class="button-height"
+        [disabled]="ionicStarterProfileForm.invalid"
+      >
+        Update
+      </ion-button>
+    </ion-item>
+    <ion-item
+      no-lines
+      *ngIf="loggedInVia !== 'Google' && loggedInVia !==  'Facebook'"
+    >
+      <ion-button
+        class="button-height"
+        color="primary"
+        [routerDirection]="'forward'"
+        [routerLink]="['/change-password']"
+      >
+        Change Password
+      </ion-button>
+    </ion-item>
+  </form>
+</ion-content>

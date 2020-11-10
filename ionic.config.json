@@ -1,0 +1,20 @@
+{
+  "projects": {
+    "capacitor-aws-starter": {
+      "name": "capacitor-aws-starter",
+      "integrations": {
+        "capacitor": {}
+      },
+      "type": "angular",
+      "root": "projects/capacitor-aws-starter"
+    },
+    "cordova-aws-starter": {
+      "name": "cordova-aws-starter",
+      "integrations": {
+        "cordova": {}
+      },
+      "type": "angular",
+      "root": "projects/cordova-aws-starter"
+    }
+  }
+}

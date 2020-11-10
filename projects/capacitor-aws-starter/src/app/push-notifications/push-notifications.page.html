@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Push Notifications</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- <ion-item>
+      <ion-label>Push Notification Status</ion-label>
+      <ion-note slot="end">
+        {{notificationPermissionState$ | async}}
+      </ion-note>
+    </ion-item> -->
+    <!-- <ion-item (click)="registerForNotifications()">
+      Register
+    </ion-item> -->
+    <ion-item (click)="sendTestPush()">Send Test Notification</ion-item>
+  </ion-list>
+</ion-content>

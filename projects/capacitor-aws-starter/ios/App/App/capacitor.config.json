@@ -1,0 +1,13 @@
+{
+  "appId": "com.binary.capacitorAwsStarterApp",
+  "appName": "Ionic AWS Starter",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {},
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}

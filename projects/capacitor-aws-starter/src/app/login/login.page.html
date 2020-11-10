@@ -1,0 +1,237 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <amplify-authenticator-ionic></amplify-authenticator-ionic> -->
+
+  <!-- <ng-container *ngIf="authState.currentUser$ | async as user">
+    <amplify-photo-picker [path]="user"></amplify-photo-picker
+  ></ng-container> -->
+
+  <ion-list>
+    <ion-item no-lines>
+      <ion-button full class="button-height-google" (click)="logInGoogle()">
+        <img src="/assets/google_img.png" class="google-img" />
+        <p class="signin-button-text">
+          SIGN IN WITH GOOGLE
+        </p>
+      </ion-button>
+    </ion-item>
+    <ion-label class="ion-no-padding ion-text-center"> </ion-label>
+    <ion-item no-lines>
+      <ion-button full class="facebook-button" (click)="logInFacebook()">
+        <ion-icon name="logo-facebook" class="logo-facebook"></ion-icon>
+        <p class="signin-button-text">
+          SIGN IN WITH FACEBOOK
+        </p>
+      </ion-button>
+    </ion-item>
+    <ion-label class="ion-no-padding ion-text-center"> </ion-label>
+
+    <!-- <amplify-authenticator-ionic></amplify-authenticator-ionic> -->
+
+    <ion-item no-lines>
+      <ion-segment [(ngModel)]="ionicStarterAccountSearchBarValue">
+        <ion-segment-button value="logInWithDetails">
+          <span class="">Login via existing Account</span>
+        </ion-segment-button>
+        <ion-segment-button value="signUp">
+          <span class="">Create New Account</span>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-item>
+
+    <ng-container
+      *ngIf="
+      ionicStarterAccountSearchBarValue == 'logInWithDetails';
+        else signUp
+      "
+    >
+      <!-- login Form start -->
+      <form [formGroup]="ionicStarterLoginForm">
+        <ion-item class="form-field">
+          <ion-label>Email</ion-label>
+          <ion-input
+            type="email"
+            class="form-control"
+            name="email"
+            formControlName="email"
+            placeholder="required"
+          ></ion-input>
+
+          <ion-button
+            clear
+            color="danger"
+            (click)="showEmailErrors(ionicStarterLoginForm)"
+            item-end
+            *ngIf="fieldEmailLogin.touched && !fieldEmailLogin.valid"
+          >
+            <ion-icon name="alert" class="err-icon"></ion-icon>
+          </ion-button>
+        </ion-item>
+
+        <ion-item class="form-field">
+          <ion-label>Password</ion-label>
+          <ion-input
+            type="password"
+            name="password"
+            formControlName="password"
+            placeholder="required"
+          ></ion-input>
+
+          <ion-button
+            clear
+            color="danger"
+            (click)="showPasswordErrors(ionicStarterLoginForm)"
+            item-end
+            *ngIf="ionicStarterLoginForm.touched && !fieldPassword.valid"
+          >
+            <ion-icon name="alert" class="err-icon"></ion-icon>
+          </ion-button>
+        </ion-item>
+        <ion-item no-lines>
+          <ion-button
+            *ngIf="!(signInProgress$ | async)"
+            color="primary"
+            full
+            [disabled]="ionicStarterLoginForm.invalid"
+            (click)="loginWithDetails()"
+            class="button-height"
+          >
+            Sign in
+          </ion-button>
+        </ion-item>
+      </form>
+
+      <ion-item no-lines class="forgot-pass  no-padding">
+        <ion-button
+          full
+          class="forgotPasswordButton"
+          clear
+          (click)="forgotPassword()"
+        >
+          Forgot password
+        </ion-button>
+      </ion-item>
+    </ng-container>
+
+    <ng-template #signUp>
+      <form [formGroup]="ionicStarterSignUpForm">
+        <ion-item class="form-field">
+          <ion-label>Name</ion-label>
+          <ion-input
+            type="text"
+            autocorrect="“off”"
+            autocomplete="off"
+            formControlName="name"
+            placeholder="required"
+          ></ion-input>
+
+          <ion-button
+            clear
+            color="danger"
+            (click)="showSignUpNameErrors()"
+            item-end
+            *ngIf="fieldSignUpName.touched && !fieldSignUpName.valid"
+          >
+            <ion-icon name="alert" class="err-icon"></ion-icon>
+          </ion-button>
+        </ion-item>
+        <ion-item class="form-field">
+          <ion-label>Email</ion-label>
+          <ion-input
+            type="email"
+            formControlName="email"
+            placeholder="required"
+          ></ion-input>
+
+          <ion-button
+            clear
+            color="danger"
+            (click)="showEmailErrors(ionicStarterLoginForm)"
+            item-end
+            *ngIf="fieldSignUpEmail.touched && !fieldSignUpEmail.valid"
+          >
+            <ion-icon name="alert" class="err-icon"></ion-icon>
+          </ion-button>
+        </ion-item>
+
+        <ion-item class="form-field">
+          <ion-label>Birth Date</ion-label>
+          <ion-datetime
+            displayFormat="MM/DD/YYYY"
+            formControlName="birthdate"
+          ></ion-datetime>
+        </ion-item>
+
+        <ion-item class="form-field">
+          <ion-label>Gender</ion-label>
+          <ion-select formControlName="gender" name="gender">
+            <ion-select-option value="Female">Female</ion-select-option>
+            <ion-select-option value="Male">Male</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item class="form-field">
+          <ion-label> Enter password</ion-label>
+          <ion-input
+            type="password"
+            formControlName="password"
+            placeholder="required"
+          ></ion-input>
+          <ion-button
+            clear
+            color="danger"
+            (click)="showPasswordErrors(ionicStarterSignUpForm)"
+            item-end
+            *ngIf="fieldSignUpPassword.touched && !fieldSignUpPassword.valid"
+          >
+            <ion-icon name="alert" class="err-icon"></ion-icon>
+          </ion-button>
+        </ion-item>
+
+        <ion-item class="form-field">
+          <ion-label>Re-enter password</ion-label>
+          <ion-input
+            type="password"
+            formControlName="confirmPassword"
+            placeholder="required"
+          ></ion-input>
+
+          <ion-button
+            clear
+            color="danger"
+            (click)="showConfirmPasswordErrors(ionicStarterSignUpForm)"
+            item-end
+            *ngIf="
+            fieldSignUpConfirmPassword.touched &&
+            !fieldSignUpConfirmPassword.valid
+          "
+          >
+            <ion-icon name="alert" class="err-icon"></ion-icon>
+          </ion-button>
+        </ion-item>
+
+        <ion-item no-lines>
+          <ion-button
+            *ngIf="!(userSignUpProgress$ | async)"
+            color="primary"
+            (click)="signUpWithDetails()"
+            full
+            class="button-height"
+            [disabled]="ionicStarterSignUpForm.invalid"
+          >
+            Sign Up
+          </ion-button>
+        </ion-item>
+      </form>
+    </ng-template>
+  </ion-list>
+</ion-content>

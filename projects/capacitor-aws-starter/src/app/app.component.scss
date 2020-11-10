@@ -1,0 +1,16 @@
+.logo {
+  max-height: 44px;
+  padding-top: 10px;
+}
+
+amplify-s3-image.menuProfileImage {
+  height: auto !important;
+  width: 57px !important;
+  display: block;
+
+  object-fit: cover;
+}
+
+.userInfo {
+  display: flex;
+}
